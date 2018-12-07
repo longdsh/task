@@ -10,7 +10,7 @@
 		</commentGenerator>
 		<!-- 配置数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1:3306/yptp?useUnicode=true&amp;characterEncoding=utf8" userId="root"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/task?useUnicode=true&amp;characterEncoding=utf8" userId="root"
 			password="root">
 		</jdbcConnection>
 
@@ -38,8 +38,7 @@
 
 
 		<!-- table指定每个表的生成策略 -->
-		 <table tableName="teacher" domainObjectName="Teacher"></table>
-		 <table tableName="prize" domainObjectName="Prize"></table>
-		 <table tableName="teacher_prize" domainObjectName="TeacherPrize"></table>
+		 
+		 <table tableName="user" domainObjectName="User"></table>
 	</context>
 </generatorConfiguration>

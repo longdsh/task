@@ -14,7 +14,7 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" 
 			/> -->
-		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="prefix" value="/" />
 		<property name="suffix" value=".html" />
 	</bean>
 
@@ -22,11 +22,20 @@
 	<context:component-scan base-package="com.acm.web" />
 
 	<!-- 登录拦截器 -->
-	<!-- <mvc:interceptors> <mvc:interceptor> <mvc:mapping path="/**" /> <mvc:exclude-mapping 
-		path="/login" /> <mvc:exclude-mapping path="/image/**" /> <mvc:exclude-mapping 
-		path="/js/**" /> <mvc:exclude-mapping path="/css/**" /> <mvc:exclude-mapping 
-		path="/fonts/**" /> <bean class="com.acm.utils.UserInterceptor"></bean> </mvc:interceptor> 
-		</mvc:interceptors> -->
+	 <mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/index.html" />
+			<mvc:exclude-mapping path="/login/**" />
+			<mvc:exclude-mapping path="/image/**" />
+			<mvc:exclude-mapping path="/js/**" />
+			<mvc:exclude-mapping path="/css/**" />
+			<mvc:exclude-mapping path="/fonts/**" />
+			<mvc:exclude-mapping path="/layuiadmin/**" />
+			<mvc:exclude-mapping path="/views/**" />
+			<bean class="com.acm.utils.UserInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

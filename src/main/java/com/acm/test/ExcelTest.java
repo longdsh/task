@@ -17,8 +17,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.acm.bean.Teacher;
-import com.acm.bean.TeacherPrize;
+
 import com.sargeraswang.util.ExcelUtil.ExcelLogs;
 import com.sargeraswang.util.ExcelUtil.ExcelUtil;
 
@@ -57,9 +56,9 @@ public class ExcelTest {
 	        map.put("2","所选奖品");
 	        map.put("3","数量");
 	        Collection<Object> dataset=new ArrayList<Object>();
+	       /* dataset.add(new TeacherPrize("12345", "阿斯蒂芬", "酒",5));
 	        dataset.add(new TeacherPrize("12345", "阿斯蒂芬", "酒",5));
-	        dataset.add(new TeacherPrize("12345", "阿斯蒂芬", "酒",5));
-	        dataset.add(new TeacherPrize("12345", "阿斯蒂芬", "酒",5));
+	        dataset.add(new TeacherPrize("12345", "阿斯蒂芬", "酒",5));*/
 	        File f=new File(filePath);
 	        OutputStream out =new FileOutputStream(f);
 	        
