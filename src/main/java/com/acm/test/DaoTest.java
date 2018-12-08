@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.acm.utils.Method;
+
 
 
 /**
@@ -24,6 +26,10 @@ public class DaoTest {
 	@Test
 	public void test() {
 		//fail("Not yet implemented");
+		String md5 = Method.getMd5("0413150313", "lusufei");
+		System.out.println(md5);
+		
+		System.out.println(Method.verify("0413150313", "1231", md5));
 		
 	}
 
