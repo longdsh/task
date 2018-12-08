@@ -23,6 +23,6 @@ public class LoginController {
 	@ResponseBody
 	public Message Login(HttpServletRequest request,User user) {
 		request.getSession().setAttribute("user", user);
-		return Message.success();
+		return Message.success().add("type", "admin");
 	}
 }
